@@ -1,6 +1,40 @@
 import "./styles.css";
 import { siteContent } from "./content";
 
+const ensureStructuredData = () => {
+  const existingScript = document.querySelector<HTMLScriptElement>(
+    'script[data-garden-bud-schema="local-business"]'
+  );
+
+  if (existingScript) {
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.dataset.gardenBudSchema = "local-business";
+  script.text = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: siteContent.businessName,
+    url: siteContent.siteUrl,
+    description: siteContent.siteDescription,
+    image: `${siteContent.siteUrl}og-image.jpg`,
+    areaServed: {
+      "@type": "City",
+      name: "Sheffield"
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Sheffield",
+      addressCountry: "GB"
+    },
+    serviceType: siteContent.services.map((service) => service.title)
+  });
+
+  document.head.append(script);
+};
+
 const renderServiceCards = () =>
   siteContent.services
     .map(
@@ -55,6 +89,14 @@ const app = document.querySelector<HTMLDivElement>("#app");
 if (!app) {
   throw new Error("App root was not found.");
 }
+
+document.title = siteContent.siteTitle;
+const metaDescription = document.querySelector('meta[name="description"]');
+if (metaDescription) {
+  metaDescription.setAttribute("content", siteContent.siteDescription);
+}
+
+ensureStructuredData();
 
 app.innerHTML = `
   <div class="page-shell">

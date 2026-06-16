@@ -30,6 +30,9 @@ export type GalleryItem = {
 export type SiteContent = {
   businessName: string;
   tagline: string;
+  siteUrl: string;
+  siteTitle: string;
+  siteDescription: string;
   location: string;
   heroTitle: string;
   heroIntro: string;
@@ -47,6 +50,10 @@ export type SiteContent = {
 export const siteContent: SiteContent = {
   businessName: "Garden Bud",
   tagline: "Garden Care & Maintenance",
+  siteUrl: "https://www.garden-bud.co.uk/",
+  siteTitle: "Gardener in Sheffield | Garden Maintenance & Care | Garden Bud",
+  siteDescription:
+    "Garden Bud provides reliable garden maintenance, pruning, tidy-ups, and general garden care for homes across Sheffield.",
   location: "Sheffield, UK",
   heroTitle: "Reliable garden care for tidy, welcoming homes across Sheffield.",
   heroIntro:

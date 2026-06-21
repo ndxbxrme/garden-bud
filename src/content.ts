@@ -49,15 +49,16 @@ export type SiteContent = {
 
 export const siteContent: SiteContent = {
   businessName: "Garden Bud",
-  tagline: "Garden Care & Maintenance",
+  tagline: "Professional Garden Care & Maintenance",
   siteUrl: "https://www.garden-bud.co.uk/",
-  siteTitle: "Gardener in Sheffield | Garden Maintenance & Care | Garden Bud",
+  siteTitle: "Expert Gardener in Sheffield | Garden Maintenance & Care | Garden Bud",
   siteDescription:
-    "Garden Bud provides reliable garden maintenance, pruning, tidy-ups, and general garden care for homes across Sheffield.",
+    "Garden Bud provides reliable garden maintenance, lawn care, hedge trimming, pruning, and seasonal tidy-ups across Sheffield. Friendly, professional service using modern battery-powered equipment for a quieter, cleaner approach to garden care.",
   location: "Sheffield, UK",
-  heroTitle: "Reliable garden care for tidy, welcoming homes across Sheffield.",
+  heroTitle:
+    "Professional garden maintenance across Sheffield, helping you enjoy your outdoor space all year round.",
   heroIntro:
-    "Garden Bud helps Sheffield homeowners keep their gardens cared for, manageable, and enjoyable all year round. Clear communication, dependable visits, and respectful work are the focus.",
+    "Whether you need regular garden maintenance, a one-off tidy-up, or help bringing an overgrown garden back under control, Garden Bud provides dependable, high-quality garden care tailored to your needs. We take pride in delivering tidy, professional results, clear communication, and a friendly service you can rely on.",
   heroImage: {
     src: gardenHero,
     alt: "A neat Sheffield garden with a striped lawn, flower beds, and patio seating."
@@ -71,27 +72,37 @@ export const siteContent: SiteContent = {
     alt: "Tom from Garden Bud smiling in his work gear."
   },
   trustNote:
-    "This first build uses temporary quotes and placeholder contact details until Tom confirms the final launch copy.",
+    "Garden Bud is run by Tom, offering reliable garden maintenance across Sheffield. Every job is approached with care and attention to detail, helping keep your garden healthy, tidy, and enjoyable throughout the year. Modern battery-powered equipment is used wherever possible for a quieter, cleaner service with less disruption.",
   services: [
     {
-      title: "Regular garden maintenance",
+      title: "Lawn Care & Maintenance",
       description:
-        "Routine visits to keep lawns, beds, borders, and paths looking tidy without the hassle of organising multiple trades."
+        "Regular mowing, edging, lawn treatments, scarifying, and seasonal care to keep your lawn healthy, tidy, and looking its best throughout the year."
     },
     {
-      title: "Seasonal tidy-ups",
+      title: "Seasonal Tidy-Ups",
       description:
-        "One-off or occasional help for overgrown patches, post-winter cleanups, and preparing the garden for spring or summer."
+        "From spring refreshes to autumn leaf clearance, we can restore order to overgrown areas and prepare your garden for the season ahead."
     },
     {
-      title: "Pruning and shaping",
+      title: "Pruning & Hedge Cutting",
       description:
-        "Careful trimming of shrubs, hedges, and small garden features to keep the space neat, balanced, and easy to maintain."
+        "Careful pruning, shrub shaping, hedge trimming, and small tree maintenance to encourage healthy growth while keeping your garden neat and well presented."
     },
     {
-      title: "General garden care",
+      title: "Patios, Paths & Hard Surfaces",
       description:
-        "Weeding, edging, leaf clearing, and practical upkeep for homeowners who want their garden looked after properly."
+        "Patio and pathway cleaning, weed control, moss removal, and repointing work to help keep outdoor surfaces safe, attractive, and well maintained."
+    },
+    {
+      title: "Beds & Borders",
+      description:
+        "Weeding, planting, mulching, composting, and border maintenance to keep flower beds healthy, colourful, and well structured throughout the seasons."
+    },
+    {
+      title: "Eco-Friendly Garden Care",
+      description:
+        "We use modern battery-powered equipment, reducing noise, avoiding petrol fumes, and providing a cleaner, more environmentally friendly service for you and your neighbours."
     }
   ],
   testimonials: [
@@ -132,15 +143,15 @@ export const siteContent: SiteContent = {
   contactMethods: [
     {
       label: "Call Tom",
-      href: "tel:01140000000",
-      note: "Placeholder phone: 0114 000 0000"
+      href: "tel:07703382563",
+      note: "Phone: 077033 82563"
     },
     {
       label: "WhatsApp",
-      href: "https://wa.me/447700900000",
-      note: "Placeholder WhatsApp: 07700 900000"
+      href: "https://wa.me/447703382563",
+      note: "WhatsApp: 077033 82563"
     }
   ],
   contactDisclaimer:
-    "Replace the phone and WhatsApp details with Tom's real contact information before publishing."
+    "Get in touch to talk through regular garden maintenance, seasonal tidy-ups, or one-off garden care."
 };

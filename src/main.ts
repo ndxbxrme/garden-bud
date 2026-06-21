@@ -139,8 +139,8 @@ app.innerHTML = `
 
       <section class="info-strip reveal" aria-label="Garden Bud introduction">
         <p>
-          Garden Bud is designed for homeowners who want a polished garden without
-          complicated arrangements. The tone is local, professional, and easy to trust.
+          Reliable, straightforward garden care for Sheffield homeowners who want their outdoor
+          space kept tidy, healthy, and easy to enjoy.
         </p>
       </section>
 
@@ -171,16 +171,13 @@ app.innerHTML = `
           </div>
           <div class="about-copy">
             <p class="eyebrow">About Tom</p>
-            <h2>A friendly local gardener clients can feel comfortable dealing with.</h2>
+            <h2>A friendly local gardener you can trust.</h2>
             <p>
-              Tom is positioned here as the person clients will actually speak to and see on site.
-              That matters for this audience: straightforward communication, reliability, and a tidy
-              finish are more convincing than flashy marketing.
-            </p>
+  As a local independent gardener, Tom takes pride in building lasting relationships with his customers. Many clients value having a familiar face they can trust to look after their garden throughout the year.
+</p>
             <p>
-              Before launch, replace this paragraph with Tom's own short introduction, experience,
-              and service promise.
-            </p>
+  With over 5 years of hands-on gardening experience, competitive rates, and a commitment to high standards, Tom helps homeowners keep their gardens looking their best throughout the year.
+</p>
           </div>
         </div>
       </section>
@@ -188,7 +185,7 @@ app.innerHTML = `
       <section class="content-section testimonials-section">
         <div class="section-heading reveal">
           <p class="eyebrow">Trust</p>
-          <h2>Built to reassure first-time visitors quickly.</h2>
+          <h2>Professional, friendly service from a gardener who takes pride in the job.</h2>
           <p class="section-note">${siteContent.trustNote}</p>
         </div>
         <div class="testimonials-grid">
@@ -202,8 +199,8 @@ app.innerHTML = `
             <p class="eyebrow">Contact</p>
             <h2>Speak to Tom about regular maintenance or a one-off tidy-up.</h2>
             <p>
-              Garden Bud is currently positioned as a Sheffield-focused service for homeowners who
-              want dependable help keeping their gardens in good order.
+              Whether you need ongoing garden maintenance or help getting things back under
+              control, Garden Bud offers practical, dependable support across Sheffield.
             </p>
             <p class="section-note">${siteContent.contactDisclaimer}</p>
           </div>

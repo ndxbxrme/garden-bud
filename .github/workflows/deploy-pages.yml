@@ -46,7 +46,12 @@ jobs:
         run: npm ci
 
       - name: Build app
-        run: npm run build
+        env:
+          BASE_PATH: ${{ env.BASE_PATH }}
+        run: |
+          echo "Building with BASE_PATH=$BASE_PATH"
+          npm run build
+          sed -n '1,80p' dist/index.html
 
       - name: Prepare Pages artifact
         run: |

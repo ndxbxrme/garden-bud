@@ -18,6 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PAGES_CUSTOM_DOMAIN: ${{ vars.PAGES_CUSTOM_DOMAIN }}
 
     steps:
       - name: Check out repository
@@ -32,7 +34,9 @@ jobs:
       - name: Derive Vite base path
         run: |
           repo_name="${GITHUB_REPOSITORY#*/}"
-          if [ "$repo_name" = "${GITHUB_ACTOR}.github.io" ]; then
+          if [ -n "$PAGES_CUSTOM_DOMAIN" ]; then
+            echo "BASE_PATH=/" >> "$GITHUB_ENV"
+          elif [ "$repo_name" = "${GITHUB_ACTOR}.github.io" ]; then
             echo "BASE_PATH=/" >> "$GITHUB_ENV"
           else
             echo "BASE_PATH=/${repo_name}/" >> "$GITHUB_ENV"
@@ -48,6 +52,9 @@ jobs:
         run: |
           cp dist/index.html dist/404.html
           touch dist/.nojekyll
+          if [ -n "$PAGES_CUSTOM_DOMAIN" ]; then
+            printf '%s\n' "$PAGES_CUSTOM_DOMAIN" > dist/CNAME
+          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
